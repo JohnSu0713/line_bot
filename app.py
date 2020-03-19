@@ -38,15 +38,15 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
+    say_list = ["我的優點是：我很帥;但是我的缺點是：我帥的不明顯。", '我是胖貓，不是病貓。', "雖然你身上噴香水，但我還是能隱約聞到一股胖貓味。", "本貓沒有豬的形象，但是我有豬的氣質!", "泥泥餓，聽不懂～"]
     i = range(0, 5)
     r = say_list[i]
-    say_list = ["我的優點是：我很帥;但是我的缺點是：我帥的不明顯。", '我是胖貓，不是病貓。', "雖然你身上噴香水，但我還是能隱約聞到一股胖貓味。", "本貓沒有豬的形象，但是我有豬的氣質!", "泥泥餓，聽不懂～"]
 
     if msg in "食物罐罐頭貓飼料吃飽餵食了沒嗎？":
         r = "泥泥永遠餓著呢...泥泥胖!!"
     elif "笨" in msg:
         r = "泥泥胖，但泥泥可不笨，喂我的是主人！"
-    elif "嗨" in msg:
+    elif "嗨" == msg:
         r = "泥泥餓，沒空跟你說『嗨』啦..."
     elif "泥泥" in msg:
         r = "見到本大貓～泥泥，還不下跪？"
@@ -56,6 +56,7 @@ def handle_message(event):
         r = "泥媽跟泥泥一樣，好愛好愛吃東西哦～"
     elif "?" in msg:
         r = "這個世界上，只有『吃飽沒？』值得問...泥泥胖！"
+
 
 
 

@@ -40,7 +40,8 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
-    r = "泥泥餓，聽不懂～"
+    i = random.int(5)
+    r = say_list[i]
     say_list = ["我的優點是：我很帥;但是我的缺點是：我帥的不明顯。", '我是胖貓，不是病貓。', "雖然你身上噴香水，但我還是能隱約聞到一股胖貓味。", "本貓沒有豬的形象，但是我有豬的氣質!", "泥泥餓，聽不懂～"]
 
     if msg in "食物罐罐頭貓飼料吃飽餵食了沒嗎？":

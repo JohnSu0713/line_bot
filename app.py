@@ -39,7 +39,8 @@ def callback():
 def handle_message(event):
     msg = event.message.text
     say_list = ["本貓優點是：我很帥～但是我的缺點是：本貓帥的不明顯...", '我是胖貓，不是病貓。', "雖然你身上噴香水，但我還是能隱約聞到一股胖貓味。", "本貓沒有豬的形象，但是我有豬的氣質!", "本泥餓，沒空聽你說啦～"]
-    r = say_list[range(5)]
+    i = int(range(5))
+    r = say_list[i]
 
     if msg in "食物罐罐頭貓飼料吃飽餵食了沒嗎？":
         r = "泥泥永遠餓著呢...泥泥胖!!"

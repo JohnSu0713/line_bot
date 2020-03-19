@@ -50,7 +50,12 @@ def handle_message(event):
         r = "泥媽跟泥泥一樣，好愛好愛吃東西哦～"
     elif "?" in msg:
         r = "這個世界上，只有『吃飽沒？』值得問泥泥...泥泥胖！！"
-    
+    elif "吃飽沒？" in msg:
+        r = "您說笑嗎？泥泥鄙視你"
+    elif msg in ["你好","泥泥你好", "嗨泥泥"]
+        r = "泥泥沒空，泥泥在吃東西，吃東西皇帝大！！"
+
+
 
 
     line_bot_api.reply_message(

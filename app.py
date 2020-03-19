@@ -44,10 +44,11 @@ def handle_message(event):
 
     if msg in ["食物吃飼料罐罐貓食物吃飽肚子餓"]
         reply = "泥泥永遠餓著呢..."
+        
 
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=event.message.text))
+        TextSendMessage(text=reply))
 
 @app.route("/StickerSendMessage/")
 def location_send_message():

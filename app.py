@@ -48,9 +48,8 @@ def handle_message(event):
         r = "泥爸是個超級大帥哥-A.K.A 『永安金城武』是他！！"
     elif "泥媽" in msg:
         r = "泥媽跟泥泥一樣，好愛好愛吃東西哦～"
-    elif "?" or "？" in msg:
-        r = "這個世界上，只有『吃飽沒？』值得問泥泥...泥泥胖！！"
-
+    elif "?" in msg:
+        r = "這個世界上，只有『吃飽沒？』值得問...泥泥胖！"
 
 
     line_bot_api.reply_message(

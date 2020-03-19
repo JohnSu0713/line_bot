@@ -42,7 +42,8 @@ def handle_message(event):
     msg = event.message.text
     reply = "公啥毀？泥泥還小，聽不懂啦！～"
 
-    if msg in ["食物吃飼料"]
+    if msg in ["食物吃飼料罐罐貓食物吃飽肚子餓"]
+        reply = "泥泥永遠餓著呢..."
 
     line_bot_api.reply_message(
         event.reply_token,

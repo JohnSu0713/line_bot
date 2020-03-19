@@ -10,8 +10,6 @@ from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,
 )
 
-import random
-
 app = Flask(__name__)
 
 line_bot_api = LineBotApi('2MMEZj3CbTCP6rt6UYYueBD9MsNnIjFAksct60sVTurfG2zg/Q/3oj9rTDXoldcYw1kpQr1Rit4qaU/qC4z0DUP1ufmUquHJQzDxriissAtciyL1U/rBzEzx5JPHIcbRvuzImGpARrsmLFu+rSFnsQdB04t89/1O/w1cDnyilFU=')
@@ -40,14 +38,14 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
-    i = random.int(5)
+    i = range(0, 5)
     r = say_list[i]
     say_list = ["我的優點是：我很帥;但是我的缺點是：我帥的不明顯。", '我是胖貓，不是病貓。', "雖然你身上噴香水，但我還是能隱約聞到一股胖貓味。", "本貓沒有豬的形象，但是我有豬的氣質!", "泥泥餓，聽不懂～"]
 
     if msg in "食物罐罐頭貓飼料吃飽餵食了沒嗎？":
         r = "泥泥永遠餓著呢...泥泥胖!!"
-    elif 
-
+    elif "笨" in msg:
+        r = "泥泥胖，但泥泥可不笨，喂我的是主人！"
     elif "嗨" in msg:
         r = "泥泥餓，沒空跟你說『嗨』啦..."
     elif "泥泥" in msg:

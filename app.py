@@ -43,7 +43,6 @@ def handle_message(event):
 
 	say_list = ["本貓優點是：我很帥～但是我的缺點是：本貓帥的不明顯...", '我是胖貓，不是病貓。', "雖然你身上噴香水，但我還是能隱約聞到一股胖貓味。", "本貓沒有豬的形象，但是我有豬的氣質!", "本泥餓，沒空聽你說啦～"]
 
-
 	if "貼圖" in msg:
 		message = StickerSendMessage(
 		package_id='1',
@@ -58,13 +57,10 @@ def handle_message(event):
 		r = "泥爸是個超級大帥哥-A.K.A 『永安金城武』是他！！"
 	elif "泥媽" in msg:
 		r = "泥媽跟泥泥一樣，好愛好愛吃東西哦"
-	elif "嗎" in msg:
-		r = "本貓只想著吃，你怎麼問題這麼多？"
-	elif "呢" in msg:
+	elif "哎" or "唉" or "哼" or "喂" or "哦" or "哈" or "嘿" or "嘖嘖" or '噢' or '唔' or '嗯' in msg:
 		r = "本貓只想著吃，你怎麼問題這麼多？"
 	else:
-		for i in range(len(say_list)):
-			r = say_list[i]
+		r = say_list[random.randint(0,6)]
 
 	line_bot_api.reply_message(
 		event.reply_token,

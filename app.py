@@ -39,18 +39,16 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    say_list = ["本貓優點是：我很帥～但是我的缺點是：本貓帥的不明顯...", '我是胖貓，不是病貓。', "雖然你身上噴香水，但我還是能隱約聞到一股胖貓味。", "本貓沒有豬的形象，但是我有豬的氣質!", "本泥餓，沒空聽你說啦～"]
-    
-    for i in range(len(say_list)):
-    	r = say_list[i]
-    	return r
+	msg = event.message.text
+
+	say_list = ["本貓優點是：我很帥～但是我的缺點是：本貓帥的不明顯...", '我是胖貓，不是病貓。', "雖然你身上噴香水，但我還是能隱約聞到一股胖貓味。", "本貓沒有豬的形象，但是我有豬的氣質!", "本泥餓，沒空聽你說啦～"]
+
 
 	if "貼圖" in msg:
 		message = StickerSendMessage(
 		package_id='1',
-		sticker_id=str(random.int(1, 18)))
+		sticker_id=str(random.randint(1,18)))
 		line_bot_api.reply_message(event.reply_token, message)
-
 
 	if msg in "食物罐罐頭貓飼料吃飽餵食了沒嗎？":
 		r = "泥泥永遠餓著呢...泥泥胖!!"
@@ -64,8 +62,9 @@ def handle_message(event):
 		r = "本貓只想著吃，你怎麼問題這麼多？"
 	elif "呢" in msg:
 		r = "本貓只想著吃，你怎麼問題這麼多？"
-
-
+	else:
+		for i in range(len(say_list)):
+			r = say_list[i]
 
 	line_bot_api.reply_message(
 		event.reply_token,

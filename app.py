@@ -40,8 +40,9 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     say_list = ["本貓優點是：我很帥～但是我的缺點是：本貓帥的不明顯...", '我是胖貓，不是病貓。', "雖然你身上噴香水，但我還是能隱約聞到一股胖貓味。", "本貓沒有豬的形象，但是我有豬的氣質!", "本泥餓，沒空聽你說啦～"]
-    for i in say_list:
-    	r = i
+    
+    for i in range(len(say_list)):
+    	r = say_list[i]
     	return r
 
 	if "貼圖" in msg:

@@ -49,6 +49,8 @@ def handle_message(event):
 		sticker_id=str(random.randint(1,18)))
 		line_bot_api.reply_message(event.reply_token, message)
 
+	for i in 
+
 	if msg in "食物罐罐頭貓飼料吃飽餵食了沒嗎？":
 		r = "泥泥永遠餓著呢...泥泥胖!!"
 	elif "嗨" in msg:
@@ -57,7 +59,7 @@ def handle_message(event):
 		r = "泥爸是個超級大帥哥-A.K.A 『永安金城武』是他！！"
 	elif "泥媽" in msg:
 		r = "泥媽跟泥泥一樣，好愛好愛吃東西哦"
-	elif "哎" or "唉" or "哼" or "喂" or "哦" or "哈" or "嘿" or "嘖嘖" or '噢' or '唔' or '嗯' in msg:
+	elif ["哎","唉","哼","喂","哦","哈","嘿","嘖嘖",'噢','唔','嗯'] in msg:
 		r = "本貓只想著吃，你怎麼問題這麼多？"
 	else:
 		r = say_list[random.randint(0,6)]
